@@ -1,6 +1,6 @@
-# channel
+# 医药微信
 
-> 壹向咖啡馆渠道
+> 前端页面呦
 
 ## Build Setup
 
