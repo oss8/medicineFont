@@ -1,0 +1,156 @@
+.common-toast {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 11000;
+    width: auto;
+    padding: 0 8px;
+    line-height: 34px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 14px;
+    color: white;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+}
+
+.common-toast-show {
+    animation: commonToastShow ease 300ms;
+}
+
+.common-toast-hide {
+    animation: commonToastHide ease 500ms;
+}
+
+@keyframes commonToastShow {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 0, 0) scale(0);
+    }
+    100% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+}
+
+@keyframes commonToastHide {
+    0% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translate3d(0, 0, 0) scale(0);
+    }
+}
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote,dl, dt, dd, ul, ol, li,pre,form, fieldset, legend, button, input, textarea,th, td {
+    margin: 0;
+    padding: 0;
+}
+/** 设置默认字体 **/
+body,button, input, select, textarea{
+    font: 14px/1.5 "微软雅黑", tahoma, \5b8b\4f53, Arial, sans-serif;
+    color: #666;
+}
+h1, h2, h3, h4, h5, h6 { font-size: 100%; font-weight: 300;}
+address, cite, dfn, em, var { font-style: normal; }
+code, kbd, pre, samp { font-family: courier new, courier, monospace; }
+small { font-size: 12px; } 
+/** 重置列表元素 **/
+ul, ol { list-style: none; }
+fieldset, img { border: 0; }
+button, input, select, textarea { font-size: 100%;} 
+button ,input{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    background: none;
+    border: none;
+    border: 1px solid #e5e5e5;
+     
+     }
+:focus{
+    outline: none;
+}
+input:focus::-webkit-contacts-auto-fill-button{
+    opacity: 0;
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill{
+        -webkit-box-shadow: 0 0 0 1000px rgba(255,255,255,0.5) inset;
+        box-shadow: 0 0 0 1000px rgba(255,255,255,0.5) inset;
+    }
+textarea{outline:none;resize:none;}
+table { border-collapse: collapse; border-spacing: 0; }
+
+/** 重置文本格式元素 **/
+a { 
+    text-decoration: none; 
+}
+a:hover {
+    text-decoration: underline;
+}
+::-webkit-input-placeholder { 
+    color:#ccc!important; 
+    font-size: 14px;
+}
+
+html,body{
+    height: 100%;
+    min-height: 600px;
+}
+*{
+    box-sizing: border-box;
+}
+input{
+    padding: 3px 8px;
+}
+#app {
+  font-family: 'PingFangSC-Light', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+//   text-align: center;
+  color: #666;
+  height: 100%;
+  min-height: 600px;
+}
+.footer{
+    width: 100%;
+    padding: 10px;
+    color: #5E6977;
+    text-align: center;
+}
+
+//按钮
+.btn-block{
+    display: block!important;
+    width: 100%;
+} 
+.el-button--primary{
+    background-color: #358ED7;
+    border-color: #358ED7;
+}
+// 表格
+//头部
+.header{
+    height: 50px;
+    border-bottom:1px solid rgba(239,240,243,0.40);
+    padding: 10px 20px 0;
+    .logo{
+        width: 197px;
+        height: 20px;
+        float: left;
+        margin-top: 5px;
+        background-image: url(../assets/logo.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+    .login{
+        float: right;
+        .userName{
+            padding: 0 10px;
+        }
+    }
+}

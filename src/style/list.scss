@@ -1,0 +1,185 @@
+.channel{
+    min-width: 1000px;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+.main{
+    min-height: 500px;
+    .modbox{
+        padding: 0 20px;
+        &.notRoot {
+         margin-bottom: 50px;
+     }
+    }
+}
+.channel-data{
+    height: 114px;
+    background: #FFFFFF;
+    box-shadow: 0 2px 0px rgba(0,0,0,0.10);
+    margin-bottom: 10px;
+    text-align: center;    
+    dl{
+        display: inline-block;
+        padding:10px 45px;
+    }
+    dt{
+        padding-top: 15px;
+    }
+    dd{
+        font-size: 40px;
+        color: #4a4a4a;
+    }
+}
+.channel-form{
+     text-align: right;
+     padding-top: 10px;
+     
+     .el-input__inner{
+         width: 270px;
+     }
+}
+.channel-table{
+    .bonus{
+        span{
+            font-size: 20px;
+            padding-left: 10px;
+        }
+        color: #4990E2;
+    }
+    .info-box{
+        padding: 10px 0;
+        .sub{
+            color: #BEC1C6;
+        }
+    }
+    .money{
+        display: inline-block;
+        padding: 2px 8px;
+        background: #E6F4E8;
+        border-radius: 2px;
+        color: #6BC678;
+        &.old{
+            background: #F5F7FA;
+            color: #BEC1C6;
+        }
+    }
+}
+.dialog-month-check {
+    .el-dialog__header {
+        text-align: left;
+        .reward-title {
+            font-size: 16px;
+            color: #4A4A4A;
+            font-weight: bold;
+        }
+        .export-btn {
+            margin-right: 20px;
+            background: #FFFFFF;
+            border: 1px solid #4990E2;
+            color: #4990E2; 
+            float: right;
+        }
+        .el-dialog__headerbtn {
+            display: none;
+        }
+    }
+    .el-dialog--large {
+        width: 700px;
+        height: 90%;
+        min-height: 540px;
+    }
+    .el-dialog__body {
+        .monthCheckTable {
+            text-align: left;
+            th {
+                background: #EBF0FA;
+                padding: 8px 10px;
+            }
+            td {
+                padding: 8px 15px;
+
+            }
+            tr {
+                font-size: 14px;
+                border-bottom: solid 1px #DDE8EF;
+            }
+            .monthCheck-userName {
+                
+                color: #666666;
+            }
+            .monthCheck-PayAccount {
+                color: #BEC1C6;
+            }
+            .monthCheck-MoneyCount {
+                font-size: 20px;
+                color: #4990E2;
+            }
+        }
+    }
+    .el-dialog {
+        margin: 20px auto;
+    }
+    .el-dialog__footer {
+        position: absolute;
+        bottom: 2%;
+        width: 100%;
+        text-align: center;
+        .pay-ok-btn {
+            width: 300px;
+            height: 46px;
+            font-size: 20px;
+            color: #fff;
+            background: #E23E2C;
+            border-color: #E23E2C;
+            border-radius: 0px;
+
+        }
+    }
+}
+//备注
+.user-info{
+    margin-top: -10px;
+    li{
+        padding-bottom: 10px;
+        padding-left: 10px;
+    }
+}
+.note-list{
+    .note-title{
+        height: 38px;
+        line-height: 38px;
+        padding: 0 15px;
+        margin: 15px 0;
+        background: #EBF0FA;
+        border-bottom: solid 1px #DDE8EF;
+    }
+    .note-cont{
+        border-left: 1px solid #4990E2;
+        margin-left: 40px;
+        padding-left: 20px;
+        dl{
+            padding-bottom: 24px;
+        }
+        dt{
+            margin-left: -26px;
+            color: #AFAFAF;
+            .icon{
+                width: 11px;
+                height: 11px;
+                border-radius: 5px;
+                display: inline-block;
+                margin-right: 10px;
+                background: #FFFFFF;
+                border: 1px solid #4990E2;
+                &.current{
+                    background-color: #4990E2;
+                }
+            }
+        }
+        dd{
+            padding-top: 5px;
+            word-break: break-word;
+        }
+
+    }
+}
