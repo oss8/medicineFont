@@ -1,31 +1,37 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank">Forum</a></li>
-      <li><a href="https://gitter.im/vuejs/vue" target="_blank">Gitter Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank">Twitter</a></li>
-      <br>
-      <li><a href="http://vuejs-templates.github.io/webpack/" target="_blank">Docs for This Template</a></li>
-    </ul>
-    <h2>Ecosystem</h2>
-    <ul>
-      <li><a href="http://router.vuejs.org/" target="_blank">vue-router</a></li>
-      <li><a href="http://vuex.vuejs.org/" target="_blank">vuex</a></li>
-      <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
-    </ul>
+  <div >
+      <mt-cell title="标题文字"></mt-cell>
+      <mt-cell title="标题文字" value="说明文字"></mt-cell>
+      <mt-cell
+  title="标题文字"
+  to="//github.com"
+  is-link
+  value="带链接">
+</mt-cell>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'hello',
+
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      value:true,
+      msg: 'Welcome to Your Vue.js App',
+      loading:false,
+      list:[1,2,3,4,5,6,7]
+    }
+  },
+  methods: {
+    loadMore() {
+      this.loading = true;
+        setTimeout(() => {
+          let last = this.list[this.list.length - 1];
+          for (let i = 1; i <= 10; i++) {
+            this.list.push(last + i);
+          }
+          this.loading = false;
+        }, 2500);
     }
   }
 }
@@ -36,7 +42,10 @@ export default {
 h1, h2 {
   font-weight: normal;
 }
-
+.page-infinite-listitem {
+    height: 50px;
+    line-height: 50px;
+}
 ul {
   list-style-type: none;
   padding: 0;
