@@ -1,0 +1,444 @@
+body{
+    font-family: 'PingFang SC','Microsoft Yahei',arial;
+    font-weight: 300;
+}
+img{
+    width: 100%;
+}
+ul,ol,li{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+.m-t-no{
+    margin-top: 0px;
+}
+@brand-primary: #F04641;
+h1, h2, h3, h4, h5, h6{
+    font-weight: 300;
+}
+
+// Navbar links
+@navbar-default-link-color:                #777;
+@navbar-default-link-hover-color:          #333;
+@navbar-default-link-hover-bg:             transparent;
+@navbar-default-link-active-color:         @brand-primary;
+@navbar-default-link-active-bg:            transparent;
+@navbar-default-link-disabled-color:       #ccc;
+@navbar-default-link-disabled-bg:          transparent;
+
+
+/*头部*/ 
+.eshine-head{
+    .navbar{
+        min-height: 84px;
+        border:none;
+        margin-bottom: 0px;
+        li{
+            a{
+                font-size: 16px;
+            }
+        }
+    }
+    .navbar-default{
+        background-color: #fff;
+    }
+    .navbar-brand{
+        height: 84px;
+        padding: 14px;
+        img{
+            max-width: 222px;
+        }
+    }
+    .navbar-collapse{
+        padding-top: 17px;
+    }
+    .navbar-toggle{
+        margin-top: 24px;
+    }
+}
+/*轮播*/ 
+.eshine-slide{
+    .carousel-inner{
+        height: 600px;
+        .item{
+            height: 600px;
+            color: #fff;
+            text-align: center;
+            background-position: top center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            h2{
+                @media (min-width: @screen-sm-min) {
+                    font-size: 48px;
+                }
+            }
+            p{
+                @media (min-width: @screen-sm-min) {
+                    font-size: 18px;
+                }
+                padding: 30px 0 60px;
+                font-weight: 300;
+            }
+            .btnBox{
+                width: 100%;
+                padding: 0 0 40px;
+                text-align: center;
+                .btn{
+                    height: 60px;
+                    background-color: #F04641;
+                    line-height: 48px;
+                    color: #fff;
+                    font-size: 24px;
+                    width: 100%;
+                    max-width: 400px;
+                }
+            }
+            &.banner1{
+                background-image: url(../../images/banner750_1.jpg);
+                @media (min-width: @screen-sm-min) {
+                    background-image: url(../../images/banner1.jpg);
+                }
+            }
+            &.banner2{
+                background-image: url(../../images/banner750_2.jpg);
+                @media (min-width: @screen-sm-min) {
+                    background-image: url(../../images/banner2.jpg);
+                }
+            }
+            &.banner3{
+                background-image: url(../../images/banner750_3.jpg);
+                @media (min-width: @screen-sm-min) {
+                    background-image: url(../../images/banner3.jpg);
+                }
+            }
+        }
+    }
+
+}
+/**/
+.eshine-h2{
+    font-size: 36px;
+    color: #F04641;
+    line-height: 56px;
+    margin-bottom: 20px;
+}
+.itemPic{
+    padding:20px 0 30px;
+    .pic{
+        text-align: center;
+        img{
+            width: 100%;
+            height: auto;
+            max-width: 200px;
+        }
+    }
+    .info{
+        line-height: 28px;
+        font-size: 16px;
+        color: @gray-light;
+        padding-top: 10px;
+        @media (min-width: @screen-sm-min) { 
+            height:54px;
+         }
+        
+    }
+}
+.eshine-txt6{
+    font-size: 16px;
+    color: @gray-light;
+    line-height: 30px;
+}
+.eshine-sub-title{
+    color: #aaa;
+    font-size: 18px;
+}
+.img-clients{
+    img{
+        max-width: 435px;
+    }
+}
+.modbox{
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+/**/
+.eshine-foot{
+    background-color: #F04641;
+    height: 60px;
+    line-height: 60px;
+    color: #fff;
+    overflow: hidden;
+    font-size: 12px;
+    @media (min-width: @screen-sm-min) { 
+        font-size: 16px;
+    }
+}
+.footer-logo{
+    margin-top: 50px;
+    img{
+        max-width:222px;
+    }
+}
+/*联系方式*/
+.contactLi{
+    padding-top: 30px;
+    font-size: 14px;
+    label{
+        color: #999;
+        padding-right: 20px;
+    }
+    li{
+        padding-bottom: 10px;
+    }
+    @media (min-width: @screen-sm-min) { 
+        font-size: 18px;
+    }
+}
+.user-form{
+    padding-top: 15px;
+    input,.input-group-addon,textarea{
+        background-color: #F8F9FB;
+        -webkit-appearance: none;
+        
+    }
+    .form-control,.input-group-addon,textarea{
+        border-color: #dedede;
+    }
+    input{
+        // border-left: 0;
+        padding: 20px 12px;
+    }
+    textarea{
+        resize: none;
+        height: 160px;
+    }
+    .btn{
+        width: 100%;
+        border-radius: 2px;
+        @media (min-width: @screen-sm-min) { 
+            width: 160px;
+        }
+    }
+    .m-m-b{
+        margin-bottom: 15px;
+    }
+    // @media (min-width: @screen-sm-min) { 
+    //     .m-m-b{
+    //         // margin-bottom: 0px;
+    //     }
+    //  }
+     @media (min-width: @screen-md-min) {
+         .m-m-b{
+            margin-bottom: 0px;
+        }
+
+     }
+}
+.subNav-box{
+    .subNav-title{
+        h4{
+            margin: 0px;
+        }
+        a ,label{
+            color: @gray-dark;
+            font-size: 14px;
+            text-decoration: none;
+        }
+        a{
+            height: 50px;
+            line-height: 50px;
+            padding: 0 10px 0 0;
+            border-bottom: 1px solid #dedede;
+            .icon{
+                float: right;
+                font-style: normal;
+            }
+        }
+
+    }
+    .subNav-list{
+        padding: 0px;
+        li{
+            margin-top: 10px;
+        }
+        a{
+            color: @gray-light;
+            display: block;
+            text-decoration: none;
+            padding: 5px 15px;
+            font-size: 12px;
+            &:hover{
+                color: @brand-primary;
+            }
+            @media (min-width: @screen-sm-min) {
+                padding: 5px 0;
+            }
+
+        }
+    }
+}
+.wechat{
+    dt{
+        padding: 20px;
+        @media (min-width: @screen-sm-min) {
+            padding:0 20px 20px;
+        }
+    }
+}
+/*产品介绍*/
+.product-banner,.join-banner{
+    height: 400px;
+    // background-color: #ccc;
+    background-position: top center;
+    background-size: cover;
+    text-align: center;
+    vertical-align: middle;
+    display: flex;
+    justify-content:center;
+    align-items:Center;
+    color: #fff;
+    h2{
+        font-size: 30px;
+        padding-bottom: 30px;
+        @media (min-width: @screen-sm-min) {
+            font-size: 48px;
+        }
+    }
+    h4{
+        font-size: 15px;
+        @media (min-width: @screen-sm-min) {
+            font-size: 18px;
+        }
+    }
+}
+.product-banner{
+    background-image: url(../../images/banner750_project.jpg);
+    @media (min-width: @screen-sm-min) {
+        background-image: url(../../images/banner_project.jpg);
+    }
+}
+.join-banner{
+    background-image: url(../../images/jumbotron750_join.jpg);
+    @media (min-width: @screen-sm-min) {
+        background-image: url(../../images/jumbotron_join.jpg);
+    }
+}
+.productList{
+    padding:15px 0;
+    @media (min-width: @screen-sm-min) {
+        padding: 40px 0;
+    }
+    .pic{
+        max-width: 560px;
+        max-height: 500px;
+        // background-color: #ccc;
+    }
+    .info{
+        // max-width: 420px;
+        padding-right: 0;
+        @media (min-width: @screen-sm-min) {
+            padding-right: 40px;
+            &.right{
+                padding-left: 40px;
+                padding-right: 0px;
+                // max-width: 520px;
+            }
+        }
+        .eshine-h2{
+            margin-top: 0px;
+            margin-bottom: 5px;
+            font-size: 22px;
+            line-height: 30px;
+        }
+        .eshine-sub-title{
+            margin-bottom: 30px;
+            margin-top: 0px;
+            font-size: 16px;
+        }
+        /* 小屏幕（平板，大于等于 768px） */
+        @media (min-width: @screen-sm-min) {
+            .eshine-h2{
+                font-size: 24px;
+            }
+         }
+
+        /* 中等屏幕（桌面显示器，大于等于 992px） */
+        @media (min-width: @screen-md-min) {
+            .eshine-h2{
+                font-size: 30px;
+                line-height: 36px;
+            }
+        }
+        /* 大屏幕（大桌面显示器，大于等于 1200px） */
+        @media (min-width: @screen-lg-min) { 
+            .eshine-h2{
+                font-size: 36px;
+                line-height: 42px;
+            }
+         }
+
+
+    }
+
+}
+/*招聘*/
+.join-group{
+    .panel{
+        border:none;
+        box-shadow: none;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .panel-heading{
+        background-color: transparent;
+        color: #F04641;
+        border-bottom:1px solid #DDE8EF;
+        
+        label{
+            height: 20px;
+            display: block;
+        }
+        a{
+            text-decoration: none;
+            padding: 5px 0 6px;
+        }
+    }
+    .panel-body{
+        border-top: none!important;
+        padding-top: 0px;
+        padding-bottom: 40px;
+        h4{
+            font-size: 14px;
+            padding-top: 15px;
+            font-weight: 400;
+        }
+        p{
+            color:#777;
+        }
+        
+    }
+    @media (min-width: @screen-sm-min) {
+        .panel{
+            padding-left: 0px;
+            padding-right:0px;
+        }
+        .collapse{
+            display: block;
+        }
+        .panel-heading{
+            border-bottom:none;
+            font-size: 18px;
+            padding-bottom: 0px;
+        }
+        .btn-apply{
+            padding-top: 20px;
+            .btn{
+                max-width: 160px;
+            }
+        }
+
+    }
+}
+.input-error{ color:#D0021B; height: 18px;margin-top: -10px;}

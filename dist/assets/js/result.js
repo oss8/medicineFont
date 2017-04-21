@@ -1,0 +1,1 @@
+"use strict";var time=3;jQuery(document).ready(function(){var t=function t(){setTimeout(function(){time--,time<=0?window.location="index.html":($("#skipTip").html(time+"秒后自动跳转至首页"),t())},1e3)};t()});
