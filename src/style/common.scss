@@ -1,34 +1,35 @@
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button{margin:0;padding:0;}
-body,button,input,select,textarea{ font-size:16px;}
+body,button,input,select,textarea{ }
 *{
     box-sizing: border-box;
 }
 h1,h2,h3,h4,h5,h6,p{
     text-align: center;
-    padding: 0 15px;
+    padding: 0 10px;
 }
 html,body{
     height: 100%;
+    background-color: #fafafa;
 }
 #app{
     min-height: 100%;
-    padding-bottom: 30px;
+    padding-bottom: 40px;
     position: relative;
 }
 .med-p{
-    padding: 15px;
+    padding: 10px;
 }
 .med-p-lr{
-    padding:0 15px;
+    padding:0 10px;
 }
 .med-p-tb{
-    padding:15px 0;
+    padding:10px 0;
 }
 .med-m{
-    margin: 15px;
+    margin:15px 10px;
 }
 .med-m-lr{
-    margin:0 15px;
+    margin:0 10px;
 }
 .med-m-tb{
     margin:15px 0;
@@ -38,8 +39,19 @@ html,body{
     color: #A2A2A2;
     text-align: left;
 }
+.med-spaceTitle{
+    font-size: 13px;
+    color: #999;
+    padding: 10px;
+}
+
+
+
 .page-button {
     padding: 0 15px 15px
+}
+.page-part {
+    margin-bottom: 15px;
 }
 .footer{
     font-size: 12px;
