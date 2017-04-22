@@ -4,6 +4,11 @@ import Bind from '@/components/bind'
 import Login from '@/components/login'
 import Me from '@/components/me'
 import Profile from '@/components/profile'
+import modify from '@/components/modify'
+import record from '@/components/record'
+import recordList from '@/components/recordList'
+import myQrCode from '@/components/myQrCode'
+
 Vue.use(Router)
 
  var router =  new Router({
@@ -27,6 +32,26 @@ Vue.use(Router)
       path: '/profile',
       name: 'profile',
       component: Profile
+    },
+    {
+      path: '/modify',
+      name: 'modify',
+      component: modify
+    },
+    {
+      path: '/record',
+      name: 'record',
+      component: record
+    },
+    {
+      path: '/recordList',
+      name: 'recordList',
+      component: recordList
+    },
+    {
+      path: '/myQrCode',
+      name: 'myQrCode',
+      component: myQrCode
     },
     {
       path: '*',
