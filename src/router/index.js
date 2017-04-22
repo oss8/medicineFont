@@ -10,13 +10,13 @@ Vue.use(Router)
   routes: [
     {
       path: '/',
-      name: 'Bind',
-      component: Bind
-    },
-    {
-      path: '/login',
       name: 'Login',
       component: Login
+    },
+    {
+      path: '/bind',
+      name: 'bind',
+      component: Bind
     },
     {
       path: '/me',
