@@ -2,9 +2,9 @@
 <template>
   <div>
     <div class="myInfo">
-      <div><img src="../assets/icon_account.png"  width="73"/></div>
-      <h4>张三丰</h4>
-      <div><span>高血压患者</span></div>
+      <div class="pic"><img src="../assets/icon_account.png"  width="73"/></div>
+      <h4 class="name">张三丰</h4>
+      <div><span class="icon-tag">高血压患者</span></div>
     </div>
     <div>
       <mt-cell title="我的二维码" to="myQrCode" is-link value=""><img src="../assets/icon_qr_code.png" width="30" /></mt-cell>
@@ -37,6 +37,21 @@
 .myInfo{
   text-align:center;
   padding:20px 0 30px;
+  .pic{
+    width:74px;
+    height:74px;
+    overflow:hidden;
+    margin:0 auto;
+  }
+  .name{
+    font-size:18px;
+    padding:5px 0 0;
+  }
+  .icon-tag{
+    background-color: #F6A623;
+    color:#fff;
+    padding:0 10px;
+  }
 }
 .myItem{
   display:flex;
