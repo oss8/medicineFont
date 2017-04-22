@@ -20,16 +20,4 @@
 </script>
 
 <style scoped lang="scss">
-.login{
-  h2{
-    padding-top:20px;
-    padding-bottom:10px;
-  }
-  h4{
-    padding-bottom:30px;
-  }
-  .page-button{
-    padding-top:40px;
-  }
-}
 </style>

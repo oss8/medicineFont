@@ -1,12 +1,20 @@
 <!--我的健康-->
 <template>
-  <div >
-        <mt-cell class="my-cell" title="我的二维码"></mt-cell>
-        <div class="btns my-cell" >
-            <div class="btn">高血压</div>
-            <div class="btn">糖尿病</div>
-            <div class="btn">健康报告</div>
-        </div>
+  <div>
+    <div class="myInfo">
+      <div><img src="../assets/icon_account.png"  width="73"/></div>
+      <h4>张三丰</h4>
+      <div><span>高血压患者</span></div>
+    </div>
+    <div>
+      <mt-cell title="我的二维码" to="myQrCode" is-link value=""><img src="../assets/icon_qr_code.png" width="30" /></mt-cell>
+    </div>
+    <div class="med-">健康随访</div>
+    <div class="btns my-cell" >
+        <div class="btn">高血压</div>
+        <div class="btn">糖尿病</div>
+        <div class="btn">健康报告</div>
+    </div>
   </div>
 </template>
 
@@ -15,18 +23,8 @@
 </script>
 
 <style scoped lang="scss">
-.btns {
-  height:90px;
-  .btn {
-    display:inline-block;
-    text-align:center;
-    width:32%;
-    padding:0;
-    margin:0;
-    height:89px;
-    background:#fff;
-    border-radius:0;
-    box-sizing: border-box;
-  }
+.myInfo{
+  text-align:center;
+  padding:20px 0 30px;
 }
 </style>

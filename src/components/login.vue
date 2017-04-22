@@ -18,6 +18,6 @@
 
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "../style/login.scss";
 </style>
