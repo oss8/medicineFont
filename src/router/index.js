@@ -1,26 +1,37 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Hello from '@/components/Hello'
-// import Login from '@/components/Login'
-// import list from '@/components/list'
+import Bind from '@/components/bind'
+import Login from '@/components/login'
+import Me from '@/components/me'
+import Profile from '@/components/profile'
 Vue.use(Router)
 
  var router =  new Router({
   routes: [
     {
       path: '/',
-      name: 'list',
-      component: Hello
+      name: 'Bind',
+      component: Bind
     },
     {
       path: '/login',
-      name: 'login',
-      component: Hello
+      name: 'Login',
+      component: Login
+    },
+    {
+      path: '/me',
+      name: 'me',
+      component: Me
+    },
+    {
+      path: '/profile',
+      name: 'profile',
+      component: Profile
     },
     {
       path: '*',
       name: 'other',
-      component: Hello
+      component: Login
     }
   ]
 })

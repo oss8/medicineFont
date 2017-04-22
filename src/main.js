@@ -1,20 +1,22 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
-import 'element-ui/lib/theme-default/index.css'
 import 'nprogress/nprogress.css'
-import VueRouter from 'vue-router';
+// import 'mint-ui/lib/style.min.css'
+// import VueRouter from 'vue-router';
 import App from './App'
 import router from './router'
-// import {Table,Form,TableColumn,Popover,Tooltip,Input,Button,FormItem} from 'element-ui'
-import ElementUI from 'element-ui'
+import Mint from 'mint-ui';
 import axios from 'axios';
-// import VueAxios from 'vue-axios';
-import './style/common.scss'
-
-Vue.config.productionTip = false
-Vue.use(ElementUI)
-Vue.use(VueRouter);
+// import './style/common.scss'
+// import { Switch,InfiniteScroll,Cell,IndexList, IndexSection } from 'mint-ui';
+// Vue.component(Switch.name, Switch);
+// Vue.component(IndexList.name, IndexList);
+// Vue.component(IndexSection.name, IndexSection);
+// Vue.config.productionTip = false
+// Vue.use(InfiniteScroll)
+// Vue.component(Cell.name, Cell);
+Vue.use(Mint);
 // Vue.use(VueAxios, axios)
 // Vue.use(Table)
 // Vue.use(Form)
