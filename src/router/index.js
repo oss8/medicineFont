@@ -7,6 +7,8 @@ import Profile from '@/components/profile'
 import modify from '@/components/modify'
 import record from '@/components/record'
 import recordList from '@/components/recordList'
+import myQrCode from '@/components/myQrCode'
+
 Vue.use(Router)
 
  var router =  new Router({
@@ -45,6 +47,11 @@ Vue.use(Router)
       path: '/recordList',
       name: 'recordList',
       component: recordList
+    },
+    {
+      path: '/myQrCode',
+      name: 'myQrCode',
+      component: myQrCode
     },
     {
       path: '*',

@@ -2,7 +2,7 @@
 <template title="健康随访">
 <div class="recordList">
   <div class="chart">
-  
+
   </div>
   <div>
     <div class="mint-cell">
