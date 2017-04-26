@@ -2,27 +2,40 @@
 <template>
   <div>
     <div class="myInfo">
-      <div class="pic"><img src="../assets/icon_account.png"  width="73"/></div>
+    <router-link to="/profile"><div class="pic"><img src="../assets/icon_account.png"  width="73"/></div></router-link>
+      
       <h4 class="name">张三丰</h4>
       <div><span class="icon-tag">高血压患者</span></div>
     </div>
     <div>
-      <mt-cell title="我的二维码" to="myQrCode" is-link value=""><img src="../assets/icon_qr_code.png" width="30" /></mt-cell>
+      <mt-cell title="我的二维码" to="/myQrCode" is-link value=""><img src="../assets/icon_qr_code.png" width="30" /></mt-cell>
     </div>
     <div class="med-spaceTitle">健康随访</div>
     <div class="mint-cell">
     <div class="mint-cell-wrapper myItem" >
+    
         <div class="item">
+        <router-link to="">
           <i class="icon"><img src="../assets/icon_blood_pressure.png" /></i>
           <p>高血压</p>
+        </router-link>
         </div>
+
+        <router-link to="">
+        </router-link>
         <div class="item">
-          <i class="icon"><img src="../assets/icon_blood_gulcose.png" /></i>
-          <p>2型糖尿病</p>
+          <router-link to="/modify">
+            <i class="icon"><img src="../assets/icon_blood_gulcose.png" /></i>
+            <p>2型糖尿病</p>
+          </router-link>
         </div>
+         
         <div class="item">
-          <i class="icon"><img src="../assets/icon_report.png" /></i>
-          <p>健康报告</p>
+          <router-link to="/record">
+            <i class="icon"><img src="../assets/icon_report.png" /></i>
+            <p>健康报告</p>
+          </router-link>
+          
         </div>
     </div>
     </div>

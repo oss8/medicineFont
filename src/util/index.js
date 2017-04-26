@@ -98,6 +98,25 @@ export default {
   },
   xlsxExport,
   axios,
+  postData (url,params) {
+    let promiseFunc = (resove,reject) => {
+            this.axios.post(url,params)
+                    .then((data) => {
+                            console.log(data);
+                            if(data.status == 1){
+                                resove(data)
+                            } else {
+                                // util.toast('获取失败');
+                                reject(data)
+                            }
+                        }
+                    )
+                    .catch( (err) => {
+                        reject(err)
+                    });
+        }
+        return new Promise(promiseFunc);
+  },
   checkPhone(val) {
         var filter = /(^0{0,1}1[3|4|5|6|7|8|9][0-9]{9}$)/;
 

@@ -5,7 +5,7 @@
   <h4>绑定您的手机，及时通知健康随访时间以及社区医生的更多服务。</h4>
   <div class="med-m-tb">
     <mt-field label="手机号" placeholder="请输入手机号" type="tel" v-model="mobile" @change="mobileChange(mobile)"></mt-field>
-    <mt-field label="验证码" placeholder="输入验证码" v-model="code"><mt-button type="default" size="small" :disabled="smsBtnDisabled" @click="sendSMS()">{{smsText}}</mt-button></mt-field>
+    <mt-field label="验证码" placeholder="输入验证码" v-model="code"><mt-button type="default" size="small"  @click="sendSMS()">{{smsText}}</mt-button></mt-field>
   </div>
   <div class="page-button">
   <mt-button type="primary" size="large" @click="bindMobile()">绑定手机</mt-button>
@@ -25,6 +25,7 @@
           smsText:'获取验证码'
         }
       },
+     
       methods:{
           sendSMS () {
             let params = {mobile:this.mobile};
@@ -90,7 +91,7 @@
                                util.toast('发送成功');
                                 resove(data)
                             } else {
-                                util.toast('添加失败，请重试');
+                                util.toast('发送失败，请重试');
                                 reject(data)
                             }
                         }
