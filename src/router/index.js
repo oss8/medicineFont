@@ -15,7 +15,12 @@ Vue.use(Router)
   routes: [
     {
       path: '/',
-      name: 'Login',
+      name: 'me',
+      component: Me
+    },
+    {
+      path: '/login',
+      name: 'login',
       component: Login
     },
     {
@@ -23,33 +28,33 @@ Vue.use(Router)
       name: 'bind',
       component: Bind
     },
-    {
-      path: '/me',
-      name: 'me',
-      component: Me
-    },
+    // {
+    //   path: '/me',
+    //   name: 'me',
+    //   component: Me
+    // },
     {
       path: '/profile',
       name: 'profile',
       component: Profile
     },
     {
-      path: '/modify',
+      path: '/modify/:id/:name/:mobile',
       name: 'modify',
       component: modify
     },
     {
-      path: '/record',
+      path: '/record/:id',
       name: 'record',
       component: record
     },
     {
-      path: '/recordList',
+      path: '/recordList/:context',
       name: 'recordList',
       component: recordList
     },
     {
-      path: '/myQrCode',
+      path: '/myQrCode/:id',
       name: 'myQrCode',
       component: myQrCode
     },

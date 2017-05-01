@@ -9,15 +9,15 @@
 export default {
   name: 'app',
    mounted () {
-            let state = this.$route.query.state;
-            let name = ''
-            console.log(this.$route.query)
-            if(state == 1) {
-                  name = 'bind'
-            } else if(state == 2) {
-                name = 'me'
-            }
-            this.$router.push({name: name})
+            // let state = this.$route.query.state;
+            // let name = ''
+            // console.log(this.$route.query)
+            // if(state == 1) {
+            //       name = 'bind'
+            // } else if(state == 2) {
+            //     name = 'me'
+            // }
+            // this.$router.push({name: name})
                         
           },
   }

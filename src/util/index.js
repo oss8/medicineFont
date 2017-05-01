@@ -102,15 +102,8 @@ export default {
     let promiseFunc = (resove,reject) => {
             this.axios.post(url,params)
                     .then((data) => {
-                            console.log(data);
-                            if(data.status == 1){
-                                resove(data)
-                            } else {
-                                // util.toast('获取失败');
-                                reject(data)
-                            }
-                        }
-                    )
+                        resove(data)
+                    })
                     .catch( (err) => {
                         reject(err)
                     });

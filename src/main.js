@@ -8,6 +8,8 @@ import App from './App'
 import router from './router'
 import Mint from 'mint-ui';
 import axios from 'axios';
+import * as filters from './filters/'
+
 // import './style/common.scss'
 // import { Switch,InfiniteScroll,Cell,IndexList, IndexSection } from 'mint-ui';
 // Vue.component(Switch.name, Switch);
@@ -17,6 +19,10 @@ import axios from 'axios';
 // Vue.use(InfiniteScroll)
 // Vue.component(Cell.name, Cell);
 Vue.use(Mint);
+Object.keys(filters.default).forEach(k => {
+  // console.log(k);
+  Vue.filter(k, filters.default[k])
+}) // 注册过滤器
 // Vue.use(VueAxios, axios)
 // Vue.use(Table)
 // Vue.use(Form)

@@ -2,40 +2,30 @@
 <template>
   <div>
     <div class="myInfo">
-    <router-link to="/profile"><div class="pic"><img src="../assets/icon_account.png"  width="73"/></div></router-link>
+    <div class="pic" @click="profileClick()"><img src="../assets/icon_account.png"  width="73"/></div>
       
-      <h4 class="name">张三丰</h4>
+      <h4 class="name">{{userInfo.name}}</h4>
       <div><span class="icon-tag">高血压患者</span></div>
     </div>
     <div>
-      <mt-cell title="我的二维码" to="/myQrCode" is-link value=""><img src="../assets/icon_qr_code.png" width="30" /></mt-cell>
+      <mt-cell title="我的二维码" :to="{name:'myQrCode',params:{id:userInfo.id}}" is-link value=""><img src="../assets/icon_qr_code.png" width="30" /></mt-cell>
     </div>
     <div class="med-spaceTitle">健康随访</div>
     <div class="mint-cell">
     <div class="mint-cell-wrapper myItem" >
     
-        <div class="item">
-        <router-link to="">
-          <i class="icon"><img src="../assets/icon_blood_pressure.png" /></i>
-          <p>高血压</p>
-        </router-link>
+        <div class="item" @click="itemClick('blood')">
+            <i class="icon"><img src="../assets/icon_blood_pressure.png" /></i>
+            <p>高血压</p>
         </div>
-
-        <router-link to="">
-        </router-link>
         <div class="item">
-          <router-link to="/modify">
             <i class="icon"><img src="../assets/icon_blood_gulcose.png" /></i>
             <p>2型糖尿病</p>
-          </router-link>
         </div>
          
         <div class="item">
-          <router-link to="/record">
             <i class="icon"><img src="../assets/icon_report.png" /></i>
             <p>健康报告</p>
-          </router-link>
-          
         </div>
     </div>
     </div>
@@ -43,7 +33,51 @@
 </template>
 
 <script>
+import util from '@/util'
+    export default {
+      data () {
+        return {
+            userInfo:{}
+        }
+      },
+      methods: {
+        itemClick (command) {
+            if (command === 'blood') {
+                this.$router.push({name:'record',params:{id:this.userInfo.id}});
+            }
+        },
+        profileClick () {
+              this.$router.push({name:'profile',params:{user:this.userInfo}});
+        }
+      },
+      mounted () {
+        // let token = this.$router.query.token;
+        let token = '123';
+        if(token) {
+            util.postData('baseServices/PublicUserLogin',{PublicUserLogin:{token:token}})
+            .then(data => {
+              console.log(data);
+                switch (data.status) {
+                  case 0 :
+                      this.$router.push({name: 'login'})
+                      break
+                  case 1:
+                      this.$router.push({name: 'bind'})
+                      break
+                  case 2:
+                      this.userInfo = data.result;
+                      break
+                  default :
+                      this.$router.push({name: 'login'})
+                }
+            })
+            .catch(err => {
 
+            })
+        }
+          
+      }
+    }
 </script>
 
 <style lang="scss">
