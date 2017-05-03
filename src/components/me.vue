@@ -65,6 +65,7 @@ import util from '@/util'
                       this.$router.push({name: 'bind'})
                       break
                   case 2:
+                      localStorage.setItem(util.userKey,JSON.stringify(data.result))
                       this.userInfo = data.result;
                       break
                   default :

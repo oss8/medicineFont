@@ -98,6 +98,7 @@ export default {
   },
   xlsxExport,
   axios,
+  userKey:'medicalUserInfo',
   postData (url,params) {
     let promiseFunc = (resove,reject) => {
             this.axios.post(url,params)

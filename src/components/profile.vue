@@ -8,7 +8,7 @@
     <mt-cell title="性别" :value="user.sex | sexFilter"></mt-cell>
     <mt-cell title="血型" value="未设置"></mt-cell>
     <mt-cell title="联系电话" to="" is-link :value="user.mobile"></mt-cell>
-    <mt-cell title="紧急联系人" :to="{name:'modify',params:{id:user.id,name:'哈哈',mobile:'15868177542'}}" is-link value="张叁  18900000000"></mt-cell>
+    <mt-cell title="紧急联系人" to="modify" is-link :value="(user.contactname || '')+ ' ' + (user.contactmobile || '')"></mt-cell>
   </div>
   <div>
     <mt-cell title="随访分类" value="高血压患者"></mt-cell>
@@ -19,6 +19,7 @@
 </template>
 
 <script>
+import util from '@/util'
   export default {
     data () {
       return {
@@ -26,7 +27,13 @@
       }
     },
     mounted () {
-        let userInfo = this.$route.params.user;
+        let userInfo = localStorage.getItem(util.userKey);
+        try {
+            userInfo = JSON.parse(userInfo);
+        }
+        catch (err) {
+            userInfo = {}
+        }
         console.log(userInfo);
         if(userInfo) {
           this.user = userInfo;

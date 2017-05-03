@@ -39,7 +39,7 @@ Vue.use(Router)
       component: Profile
     },
     {
-      path: '/modify/:id/:name/:mobile',
+      path: '/modify',
       name: 'modify',
       component: modify
     },
