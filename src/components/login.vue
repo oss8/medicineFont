@@ -66,12 +66,15 @@
                }
           },
           bindMobile () {
-              let params = {mobile:this.mobile,randcode:this.code};
+              let token = this.$route.query.token;
+              if(!token) {util.toast('token过期，请重新进入我的健康');return;}
+              let params = {mobile:this.mobile,randcode:this.code,token:token};
               if(validateInput.call(this,1)) {
                 reqBindMobile(params)
                 .then((data) => {
                     this.$router.replace({
-                                name: 'bind'
+                                name: 'bind',
+                                query:token
                         })
                 })
                 .catch((err)=>{
