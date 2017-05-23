@@ -52,6 +52,7 @@ import util from '@/util'
       },
       mounted () {
         let token = this.$router.query.token;
+        console.log(token);
         // let token = '123';
         if(token) {
             util.postData('baseServices/PublicUserLogin',{PublicUserLogin:{token:token}})
@@ -59,22 +60,25 @@ import util from '@/util'
               console.log(data);
                 switch (data.status) {
                   case 0 :
-                      this.$router.push({name: 'login'})
+                      this.$router.replace({name: 'login'})
                       break
                   case 1:
-                      this.$router.push({name: 'bind'})
+                      this.$router.replace({name: 'bind'})
                       break
                   case 2:
                       localStorage.setItem(util.userKey,JSON.stringify(data.result))
                       this.userInfo = data.result;
                       break
                   default :
-                      this.$router.push({name: 'login'})
+                      this.$router.replace({name: 'login'})
                 }
             })
             .catch(err => {
-                      this.$router.push({name: 'login'})
+                      this.$router.replace({name: 'login'})
             })
+        } else {
+          util.toast('获取token失败');
+          this.$router.replace({name: 'login'})
         }
           
       }
