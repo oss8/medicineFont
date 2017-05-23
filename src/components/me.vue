@@ -51,8 +51,8 @@ import util from '@/util'
         }
       },
       mounted () {
-        // let token = this.$router.query.token;
-        let token = '123';
+        let token = this.$router.query.token;
+        // let token = '123';
         if(token) {
             util.postData('baseServices/PublicUserLogin',{PublicUserLogin:{token:token}})
             .then(data => {
@@ -73,7 +73,7 @@ import util from '@/util'
                 }
             })
             .catch(err => {
-
+                      this.$router.push({name: 'login'})
             })
         }
           
