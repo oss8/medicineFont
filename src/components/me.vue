@@ -51,7 +51,7 @@ import util from '@/util'
         }
       },
       mounted () {
-        let token = this.$router.query.token;
+        let token = this.$route.query.token;
         console.log(token);
         // let token = '123';
         if(token) {
