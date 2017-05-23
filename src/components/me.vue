@@ -54,31 +54,32 @@ import util from '@/util'
         let token = this.$route.query.token;
         console.log(token);
         // let token = '123';
+
         if(token) {
             util.postData('baseServices/PublicUserLogin',{PublicUserLogin:{token:token}})
             .then(data => {
               console.log(data);
                 switch (data.status) {
                   case 0 :
-                      this.$router.replace({name: 'login'})
+                      this.$router.replace({name: 'login',query:{token:token}})
                       break
                   case 1:
-                      this.$router.replace({name: 'bind'})
+                      this.$router.replace({name: 'bind',query:{token:token}})
                       break
                   case 2:
                       localStorage.setItem(util.userKey,JSON.stringify(data.result))
                       this.userInfo = data.result;
                       break
                   default :
-                      this.$router.replace({name: 'login'})
+                      this.$router.replace({name: 'login',query:{token:token}})
                 }
             })
             .catch(err => {
-                      this.$router.replace({name: 'login'})
+                      this.$router.replace({name: 'login',query:{token:token}})
             })
         } else {
           util.toast('获取token失败');
-          this.$router.replace({name: 'login'})
+          this.$router.replace({name: 'login',query:{token:''}})
         }
           
       }
