@@ -5,11 +5,13 @@ module.exports = {
   build: {
     env: require('./prod.env'),
     index: path.resolve(__dirname, '../dist/index.html'),
+    favicon:path.resolve(__dirname, '../dist/favicon.ico'),
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     configDirectory:'config',
     productionSourceMap: true,
+    faviconPath:'../dist',
     // Gzip off by default as many popular static hosts such as
     // Surge or Netlify already gzip all static assets for you.
     // Before setting to `true`, make sure to:
@@ -30,6 +32,7 @@ module.exports = {
     configDirectory:'config',
     assetsPublicPath: '/',
     proxyTable: {},
+    faviconPath:'/',
     // CSS Sourcemaps off by default because relative paths are "buggy"
     // with this option, according to the CSS-Loader README
     // (https://github.com/webpack/css-loader#sourcemaps)
