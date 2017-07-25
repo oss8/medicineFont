@@ -74,7 +74,7 @@
                 .then((data) => {
                     this.$router.replace({
                                 name: 'bind',
-                                query:token
+                                query:{token}
                         })
                 })
                 .catch((err)=>{

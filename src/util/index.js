@@ -1,26 +1,9 @@
 // import ajax from './ajax'
 import config from '../config'
 import Vue from 'vue'
-import {Message} from 'element-ui'
 import nprogress from "nprogress";
 import axios from 'axios';
-import xlsxExport from './xlsx'
-// ajax.beforeEach((res, next) => {
-//   // res.url = config.baseUrl + res.url
-//   // var { accesstoken } = stores.state.user
-//   // if (accesstoken) {
-//   //   res.data.accesstoken = accesstoken
-//   // }
-//   next()
-// })
 
-// ajax.afterEach((res, next) => {
-//   if (res) {
-//     next()
-//   } else {
-//     exports.default.toast('加载失败')
-//   }
-// })
 
 nprogress.configure({
 	minimum: 1,
@@ -51,19 +34,19 @@ axios.interceptors.response.use(function(response) {
 	}
 	if (204 == response.status) { //无响应内容
     // exports.default.toast('没有数据');
-    Message({
-      message: '没有数据',
-      type: 'error'
-    })
+    // Message({
+    //   message: '没有数据',
+    //   type: 'error'
+    // })
 	}
 	return response.data;
 }, function(error) {
 	nprogress.done()
 		// Do something with response error
-	Message({
-		message: '网络连接错误',
-		type: 'error'
-	})
+	// Message({
+	// 	message: '网络连接错误',
+	// 	type: 'error'
+	// })
 	return Promise.reject(error);
 });
 
@@ -96,7 +79,7 @@ export default {
       }, 200)
     }, time)
   },
-  xlsxExport,
+  // xlsxExport,
   axios,
   userKey:'medicalUserInfo',
   postData (url,params) {
