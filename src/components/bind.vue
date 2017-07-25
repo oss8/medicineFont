@@ -32,7 +32,7 @@
                 let token = this.$route.query.token;
                 if(!token) {util.toast('token过期，请重新进入我的健康');return;}
                 let params = {PublicUserInputDetailCode:{token:token,cardNo:this.fromData.carNo,medicalNo:this.fromData.medicalNo}};
-                if(this.fromData.cardNo.length > 0 || this.fromData.medicalNo.length > 0) {
+                if(this.fromData.carNo.length > 0 || this.fromData.medicalNo.length > 0) {
                     util.postData('baseServices/PublicUserInputDetailCode',params)
                     .then((data)=> {
                         this.$router.replace({
